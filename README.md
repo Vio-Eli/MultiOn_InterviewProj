@@ -1,7 +1,5 @@
 # General Image-based MultiOn Shopping
 
----
-
 ## Overview
 
 This project presents an AI agent that can shop for you using images or descriptions of items. By utilizing state-of-the-art models like LLaVA, CLIP, Faster R-CNN, and integrating with the MultiOn API, this tool aims to provide an efficient, generalized shopping assistant. The tool is designed to identify and find the best match for the items you are interested in, and in future iterations, it will expand to include food items.
