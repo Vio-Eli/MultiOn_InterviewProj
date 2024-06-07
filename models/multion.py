@@ -1,10 +1,7 @@
 import os
-from multion.client import MultiOn
 
-# Initialize MultiOn
-multion = MultiOn(api_key=os.getenv("MULTION_API_KEY"))
 
-def search_multion(description, image_url=None):
+def search_multion(multion, description, image_url=None):
     # Use MultiOn API to search for the object
 
     if image_url:

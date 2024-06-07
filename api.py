@@ -10,14 +10,14 @@ from models.rcnn import weights, detect_objects
 from utils import encode_image_to_base64, crop_object
 
 
-def upload_image(image_path, image_name):
+def upload_image(image_open, image_name):
     url = "https://api.imgur.com/3/image"
 
     payload = {'type': 'image',
                'title': 'Simple upload',
                'description': 'This is a simple image upload in Imgur'}
     files = [
-        ('image', (image_name, image_path, 'image/jpeg'))
+        ('image', (image_name, image_open, 'image/jpeg'))
     ]
     headers = {
         'Authorization': 'Client-ID {{clientId}}'
@@ -39,10 +39,10 @@ def feedback_loop(cropped_image, initial_results, feature_extractor, preprocess,
     return best_match
 
 
-def process_query(query, image):
+def process_query(query, image, multion):
     if image:
-        image_pil = Image.open(io.BytesIO(image))
-        image_open = image.read()
+        image_pil = Image.open(image)
+        image_open = open(image, "rb")
     else:
         image_pil = None
         image_open = None
@@ -81,7 +81,7 @@ def process_query(query, image):
             if item_box is not None:
                 cropped_image = crop_object(image, item_box)
                 description = describe_object(cropped_image)
-                search_results = search_multion(description, image_url)
+                search_results = search_multion(description, image_url, multion)
 
 
                 search_res_imgs = [result.replace('(', '').replace(')', '').replace('\n', '')[1] for result in search_results.message.split(',') if result]
