@@ -47,7 +47,7 @@ def process_query(query, image):
         image_pil = None
         image_open = None
 
-        upload_image(image_open, "some_name.jpg")
+    image_url = upload_image(image_open, "some_name.jpg")
 
     print(f"Query: {query}")
 
@@ -81,7 +81,7 @@ def process_query(query, image):
             if item_box is not None:
                 cropped_image = crop_object(image, item_box)
                 description = describe_object(cropped_image)
-                search_results = search_multion(description, cropped_image)
+                search_results = search_multion(description, image_url)
 
 
                 search_res_imgs = [result.replace('(', '').replace(')', '').replace('\n', '')[1] for result in search_results.message.split(',') if result]
