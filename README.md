@@ -73,6 +73,10 @@ The project integrates several AI models and APIs to create a robust shopping as
    - **Feedback Loop**: CLIP is used to provide feedback on the search results and refine the search query.
    - **Result Display**: The best-matched items are displayed to the user for selection.
 
+## Demo
+
+Quick and fast demo video here: [https://drive.google.com/file/d/1BAq28ZAH647OaFal2axg2VOMsRe6mTYk/view?usp=sharing](https://drive.google.com/file/d/1BAq28ZAH647OaFal2axg2VOMsRe6mTYk/view?usp=sharing)
+
 ## Future Work
 
 - **Food Item Search**: Expand the capabilities to include searching for food items and recipes.
