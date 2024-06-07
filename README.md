@@ -10,9 +10,10 @@ This project presents an AI agent that can shop for you using images or descript
 2. [Installation](#installation)
 3. [Usage](#usage)
 4. [Architecture](#architecture)
-5. [Future Work](#future-work)
-6. [Contributing](#contributing)
-7. [License](#license)
+5. [Demo](#demo)
+6. [Future Work](#future-work)
+7. [Contributing](#contributing)
+8. [License](#license)
 
 ## Features
 
